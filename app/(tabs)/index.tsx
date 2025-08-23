@@ -1,11 +1,14 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 
+// Using Picsum Photos for placeholder images in development
+const PLACEHOLDER_IMAGE_URL = "https://picsum.photos/id/1/200/200";
+
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: "https://picsum.photos/200/200" }}
+        source={{ uri: PLACEHOLDER_IMAGE_URL }}
         style={styles.profileImage}
       />
       <Text>Hello, Poom!</Text>
