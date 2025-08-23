@@ -11,7 +11,8 @@ export default function HomeScreen() {
         source={{ uri: PLACEHOLDER_IMAGE_URL }}
         style={styles.profileImage}
       />
-      <Text>Hello, Poom!</Text>
+      <Text style={styles.nameText}>Poom</Text>
+      <Text style={styles.bioText}>React Native Developer</Text>
     </View>
   );
 }
@@ -28,5 +29,14 @@ const styles = StyleSheet.create({
     height: 150,
     borderRadius: 75, // Half of width/height to make it a circle
     marginBottom: 20, // Add space below the image
+  },
+  nameText: {
+    fontSize: 24,
+    fontWeight: "bold",
+  },
+  bioText: {
+    fontSize: 16,
+    color: "gray",
+    marginTop: 8, // Add space above the bio
   },
 });
