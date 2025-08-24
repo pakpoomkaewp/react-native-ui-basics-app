@@ -38,7 +38,7 @@ export default function HomeScreen() {
         value={name} // The vaule of the input is controlled by our state
       />
 
-      <Button title="Say Hello" onPress={handlePress} />
+      <Button title="Say Hello" onPress={handlePress} color="#841584" />
     </View>
   );
 }
