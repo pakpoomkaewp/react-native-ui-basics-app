@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Image, StyleSheet, Text, TextInput, View } from "react-native";
+import {
+  Alert,
+  Button,
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 
 // Using Picsum Photos for placeholder images in development
 const PLACEHOLDER_IMAGE_URL = "https://picsum.photos/id/1/200/200";
@@ -7,6 +15,11 @@ const PLACEHOLDER_IMAGE_URL = "https://picsum.photos/id/1/200/200";
 export default function HomeScreen() {
   // Set up a state variable for hold the name
   const [name, setName] = useState("Poom");
+
+  // Function to handle button press
+  const handlePress = () => {
+    Alert.alert(`Hello, ${name}!`, "Your profile is looking great.");
+  };
 
   return (
     <View style={styles.container}>
@@ -24,6 +37,8 @@ export default function HomeScreen() {
         onChangeText={setName} // Update the state when text changes
         value={name} // The vaule of the input is controlled by our state
       />
+
+      <Button title="Say Hello" onPress={handlePress} />
     </View>
   );
 }
