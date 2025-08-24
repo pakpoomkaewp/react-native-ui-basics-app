@@ -38,7 +38,9 @@ export default function HomeScreen() {
         value={name} // The vaule of the input is controlled by our state
       />
 
-      <Button title="Say Hello" onPress={handlePress} color="#841584" />
+      <View style={styles.buttonContainer}>
+        <Button title="Say Hello" onPress={handlePress} color="#841584" />
+      </View>
     </View>
   );
 }
@@ -74,5 +76,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginTop: 20,
     borderRadius: 5,
+  },
+  buttonContainer: {
+    marginTop: 20,
+    width: "60%",
   },
 });
